@@ -24,25 +24,3 @@ export const agenda = [
     detail: "Servicios escolares · Fecha límite"
   }
 ];
-
-export const views = {
-  inicio: ["Inicio", "Lunes, 16 de febrero de 2026"],
-  calificaciones: [
-    "Calificaciones",
-    "Consulta tus resultados del periodo 2025-2026/II."
-  ],
-  calendario: [
-    "Calendario",
-    "Organiza tus actividades y consulta las fechas del periodo."
-  ],
-  entregas: [
-    "Entregas",
-    "Consulta tus actividades pendientes del periodo 2025-2026/II."
-  ],
-  avisos: [
-    "Avisos",
-    "Consulta los comunicados del periodo 2025-2026/II y las acciones pendientes."
-  ],
-  entrega: ["Entrega de actividad", "Actividad 3.1 · SIE responsivo"],
-  aviso: ["Detalle de aviso", "Ejemplo de comunicado · Periodo 2025-2026/II."]
-};

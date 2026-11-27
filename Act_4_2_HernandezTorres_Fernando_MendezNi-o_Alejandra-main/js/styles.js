@@ -82,7 +82,7 @@ export const sharedStyles = `
     margin-top: 10px;
   }
 
-  /* Iconos (archivos en /img, coloreados con currentColor) */
+  /* Iconos coloreados con currentColor */
   .icon {
     display: inline-block;
     width: 26px;

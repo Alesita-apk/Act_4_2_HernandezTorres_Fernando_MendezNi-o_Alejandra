@@ -21,11 +21,18 @@ export const emit = (element, name, detail) => {
   }));
 };
 
-export const ICON_PATH = "img/";
-
+const icons = {
+  award: "Award.svg",
+  bell: "Bell.svg",
+  calendar: "Calendario.svg",
+  check: "Check.svg",
+  search: "Search.svg",
+  user: "User.svg",
+  warning: "Alert triangle.svg"
+};
 
 export const icon = name => `
   <span class="icon"
-        style="--icon: url('${ICON_PATH}${name}.svg')"
+        style="--icon: url('Iconos/${icons[name]}')"
         aria-hidden="true"></span>
 `;
