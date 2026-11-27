@@ -1,5 +1,5 @@
 import { SIEElement } from "../SIEElement.js";
-import { emit, icon } from "../utils.js";
+import { emit } from "../utils.js";
 
 
 //Avisos
@@ -13,13 +13,7 @@ export class SIENotices extends SIEElement {
         <small>2 avisos · 1 requiere tu atención</small>
 
         <article class="urgent">
-          <div class="alert-title">
-            ${icon("warning")}
-            <div>
-              <h3 class="danger">Acción requerida</h3>
-              <small>Servicios escolares · 16 feb</small>
-            </div>
-          </div>
+          <sie-notice-alert></sie-notice-alert>
 
           <p>Confirma tu carga académica antes del 20 de febrero.</p>
           <button data-view="aviso">Abrir aviso</button>
@@ -45,8 +39,6 @@ export class SIENotices extends SIEElement {
     `, `
       article { padding: 20px 16px; }
       article:last-child { border-top: 1px solid #ddd; }
-      .alert-title { display: flex; gap: 14px; align-items: center; }
-      .alert-title .icon { width: 46px; height: 46px; color: #f00; }
       h3 { margin: 10px 0; }
       p { font-size: 14px; margin: 12px 0; }
       small { display: block; }
