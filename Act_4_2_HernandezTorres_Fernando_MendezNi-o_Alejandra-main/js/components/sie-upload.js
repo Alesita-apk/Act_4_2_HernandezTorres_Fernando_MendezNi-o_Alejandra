@@ -5,6 +5,13 @@ import { emit } from "../utils.js";
 //Formulario de entrega
 
 export class SIEUpload extends SIEElement {
+  reset() {
+    this.shadowRoot.querySelector("form").reset();
+    this.shadowRoot.querySelector("#filename").textContent = "Sin archivos adjuntos";
+    this.shadowRoot.querySelector("[type=submit]").disabled = true;
+    this.shadowRoot.querySelector("#status").textContent = "";
+  }
+
   connectedCallback() {
     this.paint(`
       <form class="panel">
