@@ -2,9 +2,70 @@ body {
   margin: 0;
   background: #e0e0e0;
   font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
 }
 
-sie-app {
-  display: block;
+* { box-sizing: border-box; }
+[data-page], vista-busqueda { display: block; }
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: 36px; font-weight: 600; }
+h2, h3 { font-size: 16px; font-weight: 600; }
+p { line-height: 1.5; }
+small, .muted { color: #424242; font-size: 12px; line-height: 1.5; }
+button { font: inherit; }
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 7px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
+button:hover { background: #0059b3; }
+button:focus-visible { outline: 3px solid #0059b3; outline-offset: 3px; }
+.layout {
+  display: grid;
+  grid-template-columns: 257px minmax(0, 1fr);
+  gap: 24px;
+  padding: 0 32px 32px;
+}
+main { min-width: 0; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.heading { margin-bottom: 24px; align-items: flex-start; }
+.heading p { margin-top: 12px; color: #424242; }
+.stack { display: grid; gap: 24px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.title { margin-bottom: 12px; }
+.panel { padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 3px #00000012; }
+.metadata-item strong { display: block; margin-top: 6px; }
+.prose { white-space: pre-line; font-size: 14px; line-height: 1.5; }
+.prose h2 { margin-bottom: 16px; }
+ol { padding-left: 20px; line-height: 1.6; }
+.notice-text { margin-top: 16px; }
+#message { padding: 12px; background: #fff; border-radius: 6px; margin-top: 20px; }
+#message:empty { display: none; }
+.results { display: grid; gap: 12px; padding: 0; list-style: none; }
+.results button { width: 100%; justify-content: flex-start; }
 
+@media(max-width: 1000px) {
+  .layout { grid-template-columns: 220px minmax(0, 1fr); }
+}
+@media(max-width: 900px) {
+  .layout { grid-template-columns: 1fr; padding: 0 16px 24px; }
+}
+@media(max-width: 700px) {
+  h1 { font-size: 28px; }
+  .grid { grid-template-columns: 1fr; }
+  .row { flex-wrap: wrap; }
+}
+@media(max-width: 600px) {
+  .heading { gap: 20px; }
+}

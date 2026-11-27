@@ -8,8 +8,28 @@
 </head>
 
 <body>
-  <sie-app></sie-app>
+  <sie-header></sie-header>
+  <sie-toolbar></sie-toolbar>
+
+  <div class="layout">
+    <sie-sidebar></sie-sidebar>
+    <main>
+      <div id="content">
+        <vista-inicio data-page="inicio"></vista-inicio>
+        <vista-calificaciones data-page="calificaciones" hidden></vista-calificaciones>
+        <vista-calendario data-page="calendario" hidden></vista-calendario>
+        <vista-entregas data-page="entregas" hidden></vista-entregas>
+        <vista-avisos data-page="avisos" hidden></vista-avisos>
+        <vista-entrega data-page="entrega" hidden></vista-entrega>
+        <vista-aviso data-page="aviso" hidden></vista-aviso>
+        <vista-busqueda id="search-results" hidden></vista-busqueda>
+      </div>
+      <p id="message" role="status" aria-live="polite"></p>
+    </main>
+  </div>
 
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
+
+
